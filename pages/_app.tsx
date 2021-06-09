@@ -7,7 +7,12 @@ const Main = styled.main`
   padding: 20px;
 `;
 
-const App = ({ Component, pageProps }) => {
+type Props = {
+  Component: (props: any) => JSX.Element;
+  pageProps: unknown;
+}
+
+const App = ({ Component, pageProps }: Props) => {
     return (
         <ThemeProvider theme={missionsToolLight}>
             <>
